@@ -9,7 +9,7 @@ class Cookie:
     def setColor(self, color):
         self.color = color
 
-# this is where we create the cookie
+# this is where we create the cookie objects
 cookie_one = Cookie('green')
 cookie_two = Cookie('blue')
 
