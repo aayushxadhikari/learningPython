@@ -17,7 +17,7 @@ class LinkedList:
             temp = temp.next   # Move to the next node
 
 
-    def append(self, value):
+    def append(self, value): # adding something 
         new_node = Node(value)  # Create a new node with the given value
         if self.head is None:   # If the list is empty
          self.head = new_node  # Set the new node as both head and tail
@@ -44,6 +44,20 @@ class LinkedList:
          self.head = None    # Reset head and tail
          self.tail = None
         return temp.value       # Return the value of the removed node
+    
+
+    def prepend(self, value): #adding something to the start 
+       new_node = Node(value)
+       if self.length == 0:
+          self.head = new_node
+          self.tail = new_node
+       else:
+          new_node.next = self.head
+          self.head = new_node
+       self.length += 1
+       return True
+       
+          
 
 
         
