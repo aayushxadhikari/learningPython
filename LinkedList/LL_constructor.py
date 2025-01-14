@@ -56,6 +56,8 @@ class LinkedList:
           self.head = new_node
        self.length += 1
        return True
+    
+
        
           
 
@@ -64,6 +66,9 @@ class LinkedList:
 my_linked_list = LinkedList(4)
 my_linked_list.append(1)
 my_linked_list.append(3)
-print(my_linked_list.print_list())
-print(my_linked_list.pop())
-print(my_linked_list.print_list())
+my_linked_list.prepend(6)
+my_linked_list.print_list()
+# print(my_linked_list.print_list())
+# print(my_linked_list.pop())
+# print(my_linked_list.print_list())
+# print(my_linked_list.prepend())
