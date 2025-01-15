@@ -72,7 +72,7 @@ class LinkedList:
         temp = self.head
         for _ in range(index):
             temp = temp.next
-        return temp.value
+        return temp  # Return the node itself
     
     def set_value(self, index, value):
         temp = self.get(index)
@@ -100,7 +100,7 @@ my_linked_list = LinkedList(4)
 my_linked_list.append(1)
 my_linked_list.append(3)
 my_linked_list.prepend(6)
-# my_linked_list.insert(1, 15)
+my_linked_list.insert(1, 15)  # Fixed the insert issue
 my_linked_list.print_list()
 
 # Testing other methods
@@ -110,4 +110,4 @@ my_linked_list.print_list()
 my_linked_list.prepend(10)
 my_linked_list.print_list()
 
-print("Value at index 2:", my_linked_list.get(2))
+print("Value at index 2:", my_linked_list.get(2).value)  # Fetch the value of the node at index 2
