@@ -73,6 +73,13 @@ class LinkedList:
         for _ in range(index):
             temp = temp.next
         return temp.value
+    
+    def set_value(self, index, value):
+        temp = self.get(index)
+        if temp:
+            temp.value = value
+            return True
+        return False
 
 # Testing the corrected code
 my_linked_list = LinkedList(4)
