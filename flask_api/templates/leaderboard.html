@@ -74,21 +74,11 @@
 <body>
     <h1>🎯 Number Guessing Game 🎯</h1>
     <p>{{ message }}</p>
-    
-    {% if not username %}
-        <!-- Step 1: Username form -->
-        <form method="POST">
-            <input type="text" name="username" placeholder="Enter your name" required>
-            <button type="submit">Start Game</button>
-        </form>
-    {% else %}
-        <!-- Step 2: Guessing form -->
-        <form method="POST">
-            <input type="number" name="guess" placeholder="Enter your guess" required>
-            <button type="submit">Submit Guess</button>
-        </form>
-    {% endif %}
-    
+    <form method="POST">
+        <input type="text" name="username" placeholder="Enter your name" required>
+        <input type="number" name="guess" placeholder="Enter your guess" required>
+        <button type="submit">Submit Guess</button>
+    </form>
     <a href="/leaderboard">View Leaderboard</a>
 </body>
 </html>
