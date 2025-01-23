@@ -8,7 +8,7 @@ class Queue:
         new_node = Node(value)
         self.first = new_node
         self.last = new_node
-        self.lenght = 1
+        self.length = 1
 
     def print_queue(self):
         temp = self.first
@@ -16,7 +16,7 @@ class Queue:
             print(temp.value)
             temp = temp.next
 
-    def enqueu(self,value):
+    def enqueue(self,value):
         new_node = Node(value)
         if self.first is None:
             self.first = new_node
@@ -24,8 +24,23 @@ class Queue:
         else:
             self.last.next = new_node
             self.last = new_node
-        self.lenght += 1
+        self.length += 1
+    
+    def dequeue(self):
+        if self.length == 0:
+            return None
+        temp = self.first 
+        if self.length == 1:
+            self.first = None
+            self.last = None
+        else:
+            self.first = self.first.next
+            temp.next = None 
+        self.length -= 1
+        return temp.value
 
 my_queue = Queue(4)
-my_queue.enqueu(3)
-my_queue.print_queue()
+my_queue.enqueue(3)
+print(my_queue.dequeue(), "This is the first removed value")
+print(my_queue.dequeue(), "This is the second removed value")
+print(my_queue.dequeue(), "This is the third removed value")
