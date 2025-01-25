@@ -46,6 +46,8 @@ class DoublyLinkedList:
 
     
 
+    
+
 my_doubly_linked_list = DoublyLinkedList(7)
 my_doubly_linked_list.append(2)
 my_doubly_linked_list.pop()
