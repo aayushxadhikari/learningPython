@@ -31,20 +31,22 @@ class DoublyLinkedList:
         return True
     
     def pop(self):
-        if self.length == 0:
+        if self.length == 0: # for null items 
             return None
         temp = self.tail
-        self.tail = self.tail.prev
-        self.tail.next = None
-        temp.prev = None
-        self.length =-1
-        if self.length == 0:
+        if self.length == 1: # for 1 item present 
             self.head = None
             self.tail = None
+        else:                # for more than 1 items present
+            self.tail = self.tail.prev
+            self.tail.next = None
+            temp.prev = None
+        self.length =-1
+        
         return temp
 
 
-    
+
 
     
 
